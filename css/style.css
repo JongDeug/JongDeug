@@ -1,0 +1,14 @@
+/* 레이아웃 */
+body{
+    background: url(../img/banner.jpeg) center top;
+    background-size: cover;
+}
+
+/* 컨테이너 */
+.container{
+
+}
+
+.header{
+    height: 300px;
+}
