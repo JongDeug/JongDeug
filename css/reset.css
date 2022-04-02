@@ -38,3 +38,8 @@ a{
 a:hover{
     color: #d1c4e9;
 }
+
+/* 블릿기호 초기화 */
+ul, ol, li{
+    list-style: none;
+}
