@@ -70,6 +70,7 @@ body{
     float: left;
     width: 70%;
     margin-top: 40px; 
+    min-height: 1300px;
 }
 .content .cont_col{
     height: 250px;
