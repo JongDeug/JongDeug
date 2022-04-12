@@ -34,10 +34,12 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 65px;
+    font-family: 'Fredoka One', cursive;
 }
 .header a span{
     font-size: 40px;
     padding-top: 6px;
+    color:#fff;
 }
 .header ul li{
     display: inline; 
@@ -45,6 +47,10 @@ body{
 }
 .header ul li a{
     font-size: 20px;
+    color:#fff;
+}
+.header a span:hover, .header ul li a:hover{
+    color: #d1c4e9;
 }
 
 
@@ -56,17 +62,33 @@ body{
 }
 .title h1{
     background-color: #d4d8f3;
-    font-size: 40px;
+    font-size: 45px;
+    letter-spacing: 2px;
     display: inline-block;
     padding: 6px 40px 10px;
+    font-family: 'Fredoka One', cursive;
+    transition: box-shadow 0.25s ease-in-out;
+
+}
+.title h1:hover{
+    box-shadow: 
+        inset -9em 0 0 0 #a3ade6,
+        inset 9em 0 0 0 #a3ade6;
 }
 .title span{
     background-color: #e5e8fa;
-    font-size: 20px;
+    font-size: 25px;
     display: inline-block;
     margin-top: -7px;
     padding: 10px 10px;   
     border-radius: 10%;
+    font-family: 'Hi Melody', cursive;
+    transition: box-shadow 0.25s ease-in-out;
+}
+.title span:hover{
+    box-shadow:
+        inset 0 0 0 5px rgba(163, 173, 230, 0.9),
+        inset 0 0 0 100px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -86,12 +108,16 @@ body{
     border-top: 1px solid #dbdbdb;
 }
 
+/* pagination */
 .content .pagination{
     text-align: center;
     height: 100px;
 }
 .content .pagination ul, .content .pagination ul li{
-    display: inline;
+    display: inline-block;
+}
+.content .pagination ul li{
+    margin: 10px;
 }
 
 
