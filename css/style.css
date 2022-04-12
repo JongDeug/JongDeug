@@ -22,6 +22,11 @@ body{
     /* background: rgba(0,0,0,0.3); */
 }
 
+/* 자바 스크립트 컨트롤 */
+.hidden{
+    display: none;
+}
+
 
 /* 헤더 영역 */
 .header{
@@ -85,6 +90,10 @@ body{
     text-align: center;
     height: 100px;
 }
+.content .pagination ul, .content .pagination ul li{
+    display: inline;
+}
+
 
 
 /* 어사이드 영역 */

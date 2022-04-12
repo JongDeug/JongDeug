@@ -33,7 +33,7 @@ figcaption {
 /* a링크 초기화 */
 a{
     text-decoration: none;
-    color:#fff;
+    color:#000;
 }
 a:hover{
     color: #d1c4e9;
