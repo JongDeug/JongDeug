@@ -2,7 +2,6 @@
 body {
     background: url(../img/banner.jpg) center top repeat-x;
     background-size: cover;
-    position: relative;
 }
 
 #header {
@@ -37,9 +36,21 @@ body {
     font-family: 'Fredoka One', cursive;
 }
 
-.header a span {
+.sidenavIcon {
     font-size: 40px;
-    padding-top: 6px;
+    color: #fff;
+}
+
+.sidenavIcon:hover {
+    color: #d1c4e9;
+}
+
+.header a span {
+    position: absolute;
+    top: 14px;
+    left: 50px;
+    font-size: 40px;
+    display: inline-block;
     color: #fff;
 }
 
@@ -301,6 +312,7 @@ body {
     top: 64px;
     right: 370px;
     z-index: 1;
+    font-size: 20px;
 }
 
 .dropdown-content a {
@@ -385,9 +397,45 @@ body {
     background-color: yellow;
 }
 
-.drag-over{
+.drag-over {
     border: dashed 3px red;
 }
+
+/* side nav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    /* margin-left: 50px; */
+}
+
+
 /* 미디어 쿼리 */
 /* 화면 너비 0~1220px 모니터 */
 @media (max-width: 1220px) {
@@ -401,6 +449,10 @@ body {
 
     .content {
         width: 66%;
+    }
+
+    .header a span {
+        left: 60px;
     }
 }
 
@@ -417,6 +469,7 @@ body {
     .aside {
         display: none;
     }
+
 }
 
 /* 화면 너비 0~768px */

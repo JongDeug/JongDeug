@@ -20,11 +20,23 @@
 </head>
 
 <body>
+    <div id="mySidenav" class="sidenav">
+        <a href="#" class="closebtn">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <!--//사이드바-->
+    
     <header id="header">
         <div class="container">
             <div class="white-space">
                 <div class="header">
-                    <a href="/index.html"><span class="material-icons">home</span></a>
+                    <div>
+                        <span class="sidenavIcon">&#9776;</span>
+                        <a href="/index.html"><span class="material-icons">home</span></a>
+                    </div>
                     <ul>
                         <li class="dropdown"><a href="#">About</a></li>
                         <li><a href="/posts.html">Posts</a></li>
@@ -177,6 +189,7 @@
     <script src="js/dropdown.js"></script>
     <script src="js/tabmenu.js"></script>
     <script src="js/draganddrop.js"></script>
+    <script src="js/sidenav.js"></script>
 </body>
 
 </html>
