@@ -1,20 +1,25 @@
 /* 레이아웃 */
-body{
+body {
     background: url(../img/banner.jpg) center top repeat-x;
     background-size: cover;
+    position: relative;
 }
-#header{
+
+#header {
     background-color: #424242;
 }
-#main, #footer{
+
+#main,
+#footer {
     background-color: #fff;
 }
-#footer{
+
+#footer {
     border-top: 1px solid #dbdbdb;
 }
 
 /* 컨테이너 */
-.container{
+.container {
     width: 1200px;
     margin: 0 auto;
     overflow: hidden;
@@ -22,45 +27,46 @@ body{
     /* background: rgba(0,0,0,0.3); */
 }
 
-/* 자바 스크립트 컨트롤 */
-.hidden{
-    display: none;
-}
-
 
 /* 헤더 영역 */
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 65px;
     font-family: 'Fredoka One', cursive;
 }
-.header a span{
+
+.header a span {
     font-size: 40px;
     padding-top: 6px;
-    color:#fff;
+    color: #fff;
 }
-.header ul li{
-    display: inline; 
+
+.header ul li {
+    display: inline;
     padding-left: 13px;
 }
-.header ul li a{
+
+.header ul li a {
     font-size: 20px;
-    color:#fff;
+    color: #fff;
 }
-.header a span:hover, .header ul li a:hover{
+
+.header a span:hover,
+.header ul li a:hover {
     color: #d1c4e9;
 }
 
-
 /* 타이틀 영역 */
-.title{
+.title {
     text-align: center;
     margin-top: 100px;
     padding-bottom: 100px;
+    z-index: -1;
 }
-.title h1{
+
+.title h1 {
     background-color: #d4d8f3;
     font-size: 45px;
     letter-spacing: 2px;
@@ -70,119 +76,367 @@ body{
     transition: box-shadow 0.25s ease-in-out;
 
 }
-.title h1:hover{
-    box-shadow: 
+
+.title h1:hover {
+    box-shadow:
         inset -9em 0 0 0 #a3ade6,
         inset 9em 0 0 0 #a3ade6;
 }
-.title span{
+
+.title span {
     background-color: #e5e8fa;
     font-size: 25px;
     display: inline-block;
     margin-top: -7px;
-    padding: 10px 10px;   
+    padding: 10px 10px;
     border-radius: 10%;
     font-family: 'Hi Melody', cursive;
     transition: box-shadow 0.25s ease-in-out;
 }
-.title span:hover{
+
+.title span:hover {
     box-shadow:
         inset 0 0 0 5px rgba(163, 173, 230, 0.9),
         inset 0 0 0 100px rgba(0, 0, 0, 0.1);
 }
 
-
 /* 컨텐츠 영역 */
-.content{
+.content {
     float: left;
     width: 70%;
-    margin-top: 40px; 
-    min-height: 1300px;
+    margin-top: 40px;
+    min-height: 1560px;
 }
-.content .cont_col{
+
+.content .cont_col {
     height: 250px;
-    padding: 20px;   
+    padding: 20px;
     border-bottom: 1px solid #dbdbdb;
 }
-.content .cont_col:first-child{
+
+.content .cont_col:first-child {
     border-top: 1px solid #dbdbdb;
 }
 
 /* pagination */
-.content .pagination{
+.content .pagination {
     text-align: center;
     height: 100px;
 }
-.content .pagination ul, .content .pagination ul li{
+
+.content .pagination ul,
+.content .pagination ul li {
     display: inline-block;
 }
-.content .pagination ul li{
+
+.content .pagination ul li {
     margin: 10px;
 }
 
-
-
 /* 어사이드 영역 */
-.aside{
+.aside {
     position: absolute;
-    right: 0; top: 0;
+    right: 0;
+    top: 0;
     width: 320px;
     margin-top: 40px;
 }
-.aside .aside_col{
+
+.aside .aside_col {
     height: 430px;
-    padding: 20px;  
+    padding: 20px;
     border-top: 1px solid #dbdbdb;
 }
 
-.aside .aside_top .profile{
-    text-align: center;
-}
-.aside .aside_top .profile img{
-    width: 200px; height: 200px;
-    border-radius: 70%;
+.aside .aside_top .profile {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
+.aside .aside_top .profile ul {
+    position: absolute;
+    list-style: none;
+    display: flex;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.aside .aside_top .profile ul li {
+    margin: 2px;
+    padding: 2px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.aside .aside_top .profile img {
+    /* width: 200px;
+    height: 200px;
+    border-radius: 70%; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.aside .aside_top .profile button {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+}
+
+.aside .aside_top .profile button>span {
+    position: absolute;
+}
+
+.prev_btn {
+    top: 50%;
+    left: 0;
+    z-index: 1;
+}
+
+.prev_btn span {
+    top: 12px;
+    left: 7px;
+}
+
+.next_btn {
+    top: 50%;
+    right: 0;
+}
+
+.next_btn span {
+    top: 12px;
+    right: 0;
+}
 
 
 /* 푸터 영역 */
-.footer{
+.footer {
     padding: 30px 0;
     text-align: center;
 }
-.footer ul{}
-.footer ul li{
+
+.footer ul {}
+
+.footer ul li {
     display: inline;
 }
-.footer ul li a{
+
+.footer ul li a {
     color: #000;
 }
 
+/* 모달 영역 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 효과 주기 참 어렵네요 */
+    visibility: collapse;
+    opacity: 0;
+    z-index: 2;
+}
+
+.modal_overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.modal_content {
+    width: 20%;
+    position: relative;
+    background-color: rgb(255, 255, 255, 1);
+    padding: 50px 100px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal_content h1 {
+    margin: 0;
+    padding: 5px;
+}
+
+.modal_text {
+    padding: 10px;
+}
+
+.modal_content button {
+    all: unset;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* 자바 스크립트 컨트롤 */
+.hidden {
+    display: none;
+}
+
+.act {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in;
+}
+
+.active {
+    color: white;
+}
+
+/* dropdown 메뉴 */
+.dropdown-content {
+    position: absolute;
+    top: 64px;
+    right: 370px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 20px 60px 20px 20px;
+    background-color: #424242;
+    border: 1px solid white;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #28282b;
+    color: white;
+}
+
+.dropdown-content a:nth-child(2) {
+    border-top: none;
+    border-bottom: none;
+}
+
+/* tab menu */
+.tab-container {
+    display: flex;
+}
+
+.tab-items:hover {
+    background-color: #369fff;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.tab-items:hover .tab-title {
+    color: #fff;
+    transition: color 0.4s ease-in-out;
+}
+
+.tab-items.active {
+    border-bottom: 2px solid #369fff;
+}
+
+.tab-items.active .tab-title {
+    color: #369fff;
+}
+
+.tab-items.active:hover .tab-title {
+    color: #fff;
+    transition: color 0.4s ease-in-out;
+}
+
+.tab-title {
+    display: inline-block;
+    color: #999;
+    font-weight: 700;
+    margin: 15px;
+}
+
+.content-container {
+    padding: 10px;
+}
+
+.content-items {
+    display: none;
+}
+
+.content-items.target {
+    display: block;
+}
+
+/* drag and drop */
+.box {
+    border: 2px solid #28282b;
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 60px;
+    height: 60px;
+    background-color: yellow;
+}
+
+.drag-over{
+    border: dashed 3px red;
+}
 /* 미디어 쿼리 */
 /* 화면 너비 0~1220px 모니터 */
-@media (max-width: 1220px){
-    .container{width: 100%;}
-    .white-space{padding: 0 20px;}
-    .content{width: 66%;}
+@media (max-width: 1220px) {
+    .container {
+        width: 100%;
+    }
+
+    .white-space {
+        padding: 0 20px;
+    }
+
+    .content {
+        width: 66%;
+    }
 }
+
 /* 화면 너비 0~1024px */
-@media (max-width: 1024px){
-}
+@media (max-width: 1024px) {}
+
 /* 화면 너비 0~960px 태블릿 */
-@media (max-width: 960px){
-    .content{float: none; width: 100%;}
-    .aside{display: none;}
+@media (max-width: 960px) {
+    .content {
+        float: none;
+        width: 100%;
+    }
+
+    .aside {
+        display: none;
+    }
 }
+
 /* 화면 너비 0~768px */
-@media (max-width: 768px){
-}
+@media (max-width: 768px) {}
+
 /* 화면 너비 0~600px 모바일 */
-@media (max-width: 600px){
-    .title{margin: 0; padding: 0;}
-    .title h1{background-color: rgb(0,0,0,0);}
-    .title span{display: none;}
+@media (max-width: 600px) {
+    .title {
+        margin: 0;
+        padding: 0;
+    }
+
+    .title h1 {
+        background-color: rgb(0, 0, 0, 0);
+    }
+
+    .title span {
+        display: none;
+    }
 }
+
 /* 화면 너비 0~480px */
-@media (max-width: 480px){
-    
-}
+@media (max-width: 480px) {}

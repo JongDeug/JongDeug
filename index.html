@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +15,10 @@
 
     <!-- Material Icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
+
 <body>
     <header id="header">
         <div class="container">
@@ -22,11 +26,17 @@
                 <div class="header">
                     <a href="/index.html"><span class="material-icons">home</span></a>
                     <ul>
-                        <li><a href="/about.html">About</a></li>
+                        <li class="dropdown"><a href="#">About</a></li>
                         <li><a href="/posts.html">Posts</a></li>
                     </ul>
+
                 </div>
             </div>
+        </div>
+        <div class="dropdown-content hidden">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
         </div>
     </header>
     <!-- //header -->
@@ -52,7 +62,7 @@
                     <span>2022/?/?</span>
                 </article> -->
                 </div>
-                
+
                 <div class="pagination">
                     <a href="#" onclick="javascript:prevPage()" id="btn_prev">Prev</a>
                     <ul id="pages"></ul>
@@ -60,39 +70,73 @@
                 </div>
             </section>
             <!-- //content -->
-
             <aside class="aside">
                 <div class="aside_col aside_top">
                     <div class="profile">
-                        <img src="img/profile.jpg" alt="">
+                        <button class="prev_btn">
+                            <span class="material-symbols-outlined">
+                                arrow_back_ios
+                            </span>
+                        </button>
+                        <div class="image">
+                            <!-- img 태그 들어갈 자리 -->
+                        </div>
+                        <button class="next_btn">
+                            <span class="material-symbols-outlined">
+                                arrow_forward_ios
+                            </span>
+                        </button>
+                        <ul>
+                        </ul>
                     </div>
-                    <p>name : description</p>
+                    <!-- <p>name : description</p> -->
                 </div>
                 <!-- //aside_top -->
                 <h2 class="ir_su">블로그 Home 컨텐츠 카테고리</h2>
                 <div class="aside_col aside_center">
-                    <h3>Title</h3>
-                    <ul>
-                        <li>~</li>
-                        <li>~</li>
-                        <li>~</li>
+                    <ul class="tab-container">
+                        <li class="tab-items active" data-tab="tab1"><a class="tab-title" href="#">Tab1</a></li>
+                        <li class="tab-items" data-tab="tab2"><a class="tab-title" href="#">Tab2</a></li>
+                        <li class="tab-items" data-tab="tab3"><a class="tab-title" href="#">Tab3</a></li>
                     </ul>
+                    <div class="content-container">
+                        <article id="tab1" class="content-items target">
+                            <h1>Tab1</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus minima aut
+                                adipisci sunt reiciendis consequatur, vitae voluptatem autem accusantium deleniti odio
+                                laborum ut, perferendis tempore incidunt neque, rem repudiandae!</p>
+                        </article>
+                        <article id="tab2" class="content-items">
+                            <h1>Tab2</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus minima aut
+                                adipisci sunt reiciendis consequatur, vitae voluptatem autem accusantium deleniti odio
+                                laborum ut, perferendis tempore incidunt neque, rem repudiandae!</p>
+                        </article>
+                        <article id="tab3" class="content-items">
+                            <h1>Tab3</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus minima aut
+                                adipisci sunt reiciendis consequatur, vitae voluptatem autem accusantium deleniti odio
+                                laborum ut, perferendis tempore incidunt neque, rem repudiandae!</p>
+                        </article>
+                    </div>
                 </div>
                 <!-- //aside_center -->
                 <div class="aside_col aside_bottom">
-                    <h3>Title</h3>
-                    <ul>
-                        <li>~</li>
-                        <li>~</li>
-                        <li>~</li>
-                    </ul>
+                    <h1>Javascript - Drag and Drop</h1>
+                    <div class="drop-targets">
+                        <div class="box">
+                            <div class="item" id="item" draggable="true"></div>
+                        </div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
                 </div>
                 <!-- //aside_bottom -->
             </aside>
             <!-- //aside -->
         </div>
     </main>
-
+    <!-- //main -->
     <footer id="footer">
         <div class="container">
             <div class="footer">
@@ -113,10 +157,28 @@
             </div>
         </div>
     </footer>
+    <!-- //footer -->
 
+    <div class="modal">
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+            <h1>모달창</h1>
+            <div class="modal_text">
+                vanilla javascript로 모달창 만들기
+            </div>
+            <button>X</button>
+        </div>
+    </div>
+    <!-- //modal -->
 
     <script src="js/pagination.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/tabmenu.js"></script>
+    <script src="js/draganddrop.js"></script>
 </body>
+
 </html>
 
 
